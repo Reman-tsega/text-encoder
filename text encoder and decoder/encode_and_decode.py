@@ -2,14 +2,10 @@
 # encode each letter by shifting .index 
 # take input from user 
 # ask for shifter
-# 
-alphabet =["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"," ","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 
-alp = [ "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+alphabet =["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"," ","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 encoded_word = []
 decoded_word=[]
-
-
 
 def encoder(word,shifter):
     for z in range(0, len(word)-1):
@@ -33,7 +29,9 @@ def decoder(shifter):
         decoded_message = "".join(decoded_word)
     print(f"docoded word is {decoded_message}")
 
-# decoder(encoded_message)
+
+    
+    
 # save the encoded message into file dir encoded message
 with open('encoded_message.txt','r') as f:
     decoded_letter = f.read()
@@ -50,22 +48,3 @@ else:
     decoder(shifter)
 
 
-# def caesar_cipher(word,shifter):
-#     for z in range(0, len(word)):
-#         position=alphabet.index(word[z])
-#         if method== "encode":
-#             new_position = position+shifter
-#             encoded_letter = alphabet[new_position] 
-#             encoded_word.append(encoded_letter)
-#             encoded_message = "".join(encoded_word)
-#             with open("./encoded_message.txt","w") as f:
-#                 f.write(encoded_message)
-#             print(f"decoded word is { encoded_message  }")
-#         else:
-#             new_position = position -shifter
-#             decoded_letter = decoded_letter[new_position]
-#             decoded_word.append(decoded_letter)
-#             decoded_message = "".join(decoded_word)
-#             print(f"docoded word is {decoded_message}")
-
-# caesar_cipher(word,shifter)
